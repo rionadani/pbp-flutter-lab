@@ -55,3 +55,9 @@ Navigator bekerja seperti stack. Halaman yang dilihat oleh user adalah halaman y
 3. Membuat class `Data Input` yang memiliki atribut listJudul, listNominal, dan listJenis yang digunakan untuk menyimpan input.
 4. Membuat text form field untuk input judul dan nominal budget, drop down button untuk memilih jenis budget, dan text button yang berfungsi untuk menyimpan data.
 5. Membuat file `data.dart` untuk menampilkan data input.
+
+# Tugas 9
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
