@@ -58,6 +58,38 @@ Navigator bekerja seperti stack. Halaman yang dilihat oleh user adalah halaman y
 
 # Tugas 9
 ### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, hal tersebut dapat dilakukan dengan menggunakan library bawaan flutter yaitu code generation library, tepatnya json_serializable. Cara ini cocok apabila data json yang diolah berskala menengah ke besar. Untuk pengolahan data json yang berskala kecil, penggunaan model lebih efektif dan user friendly.
+
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Appbar: Menampilkan title aplikasi, yaitu Program Counter
+- Text: Menampilkan text "GANJIL" atau "GENAP"
+- Floating Action Button: Button untuk melakukan increment dan decrement
+- Container: Sebagai wadah untuk button increment dan decrement
+- Row dan Column: Mengatur layout sesuai kebutuhan
+- Drawer: Untuk navigasi ke halaman yang berbeda
+- Text Form Field: Input judul budget dan nominal budget
+- Dropdown Button: Memilih jenis budget, pemasukan atau pengeluaran
+- Text Button: Button untuk menyimpan input
+- Sized Box: Untuk menampilkan masing-masing judul
+- Box Decoration: Mengatur tampilan box
+- Future builder: Mengolah data hasil konversi dari json
+- Async: Menerima http response untuk di-convert ke json
+
 ### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Membuat Model 
+2. Menambahkan dependensi HTTP
+3. Membuat HTTP request ke web service
+4. Melakukan decode response menjadi bentuk json
+5. Melakukan konversi data json menjadi object
+6. Menggunakan widget Future Builder untuk menampilkan data yang sudah dikonversi
+
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menyalin data json pada tugas 3
+2. Membuka situs web Quicktype dan menempel data tersebut ke text box
+3. Menyalin code yang ada di Quicktype
+4. Menempelkan codo dari Quicktype ke file `my_watchlist.dart`
+5. Menambahkan dependensi HTTP
+6. Membuat file `my_watchlist_page.dart` dan pengambilan data dari URL https://tugas-1-riona.herokuapp.com/mywatchlist/json/
+7. Menampilkan judul-judul yang ada pada data tersebut
+8. Menambahkan text button details yang mengarahkan user ke page detail dari judul tersebut
+8. Membuat file `my_watchlist_details_page` untuk menampilkan detail-detail dari judul serta menambahkan button back.

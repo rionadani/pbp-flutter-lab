@@ -27,9 +27,11 @@ class _MyWatchListDetailsPageState extends State<MyWatchListDetailsPage> {
         Text(Details.fetcher.title),
         Text('Release Date : ' + Details.fetcher.releaseDate),
         Text('Rating : ' + Details.fetcher.rating.toString()),
-        Text('Status : ' + Details.fetcher.watched),
+        Text('Status : ' + Details.getStatus()),
         Text('Review : ' + Details.fetcher.review),
+        
         const Spacer(),
+        
         TextButton(
           onPressed: () {
             Navigator.pop(context);
@@ -44,4 +46,12 @@ class _MyWatchListDetailsPageState extends State<MyWatchListDetailsPage> {
 class Details {
   static late Fields getFields;
   static Fields get fetcher => getFields;
+  static String status = "Not Watched";
+
+  static String getStatus() {
+    if (getFields.watched == 'Yes') {
+      status = "Watched";
+    }
+    return status;
+  }
 }
